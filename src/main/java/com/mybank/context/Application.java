@@ -1,8 +1,8 @@
-package mybank.context;
+package com.mybank.context;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import mybank.service.TransactionService;
+import com.mybank.service.TransactionService;
 
 public class Application {
 

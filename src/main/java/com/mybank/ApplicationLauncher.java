@@ -1,6 +1,6 @@
-package mybank;
+package com.mybank;
 
-import mybank.web.TransactionServlet;
+import com.mybank.web.TransactionServlet;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.Wrapper;

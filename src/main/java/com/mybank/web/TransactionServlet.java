@@ -1,9 +1,9 @@
-package mybank.web;
+package com.mybank.web;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import mybank.context.Application;
-import mybank.model.Transaction;
-import mybank.service.TransactionService;
+import com.mybank.context.Application;
+import com.mybank.model.Transaction;
+import com.mybank.service.TransactionService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

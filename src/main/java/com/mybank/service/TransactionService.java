@@ -1,6 +1,6 @@
-package mybank.service;
+package com.mybank.service;
 
-import mybank.model.Transaction;
+import com.mybank.model.Transaction;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;

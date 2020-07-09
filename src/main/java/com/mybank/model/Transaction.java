@@ -1,4 +1,4 @@
-package mybank.model;
+package com.mybank.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
