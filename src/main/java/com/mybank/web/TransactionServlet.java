@@ -1,10 +1,12 @@
 package com.mybank.web;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mybank.context.Application;
+import com.mybank.context.MyBankConfiguration;
 import com.mybank.model.Transaction;
 import com.mybank.service.TransactionService;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,8 +17,15 @@ import java.util.List;
 
 public class TransactionServlet extends HttpServlet {
 
-    private TransactionService transactionService = Application.transactionService;
-    private ObjectMapper objectMapper = Application.objectMapper;
+    private TransactionService transactionService;
+    private ObjectMapper objectMapper;
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(MyBankConfiguration.class);
+        transactionService = ctx.getBean(TransactionService.class);
+        objectMapper = ctx.getBean(ObjectMapper.class);
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -8,6 +8,7 @@ import java.util.UUID;
 
 public class Transaction {
 
+
     private String id;
 
     private BigDecimal amount;
@@ -17,14 +18,17 @@ public class Transaction {
 
     private String reference;
 
+    private String slogan;
+
     public Transaction() {
     }
 
-    public Transaction(BigDecimal amount, ZonedDateTime timestamp, String reference) {
+    public Transaction(BigDecimal amount, ZonedDateTime timestamp, String reference, String slogan) {
         this.id = UUID.randomUUID().toString();
         this.amount = amount;
         this.timestamp = timestamp;
         this.reference = reference;
+        this.slogan = slogan;
     }
 
     public String getId() {
@@ -57,5 +61,13 @@ public class Transaction {
 
     public void setReference(String reference) {
         this.reference = reference;
+    }
+
+    public String getSlogan() {
+        return slogan;
+    }
+
+    public void setSlogan(String slogan) {
+        this.slogan = slogan;
     }
 }
