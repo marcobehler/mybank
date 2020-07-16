@@ -1,15 +1,17 @@
-package com.mybank.dto;
+package com.mybank.web.forms;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 import java.math.BigDecimal;
 
-public class TransactionDto {
+public class TransactionForm {
 
     @NotNull
+    @DecimalMin("0.01")
+    @Max(100)
     private BigDecimal amount;
 
     @NotBlank
+    @Size(min = 1, max = 25)
     private String reference;
 
     @NotBlank
@@ -38,5 +40,4 @@ public class TransactionDto {
     public void setReceivingUser(String receivingUser) {
         this.receivingUser = receivingUser;
     }
-
 }
