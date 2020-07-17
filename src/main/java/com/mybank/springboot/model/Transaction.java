@@ -1,13 +1,16 @@
 package com.mybank.springboot.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
+@Table("TRANSACTIONS")
 public class Transaction {
 
-
+    @Id
     private String id;
 
     private BigDecimal amount;
