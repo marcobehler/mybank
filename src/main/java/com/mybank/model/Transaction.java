@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
-import java.util.UUID;
 
 public class Transaction {
 
@@ -26,7 +25,6 @@ public class Transaction {
     }
 
     public Transaction(BigDecimal amount, ZonedDateTime timestamp, String reference, String slogan, String receivingUser) {
-        this.id = UUID.randomUUID().toString();
         this.amount = amount;
         this.timestamp = timestamp;
         this.reference = reference;
