@@ -1,6 +1,6 @@
-package com.mybank.service;
+package com.mybank.springboot.service;
 
-import com.mybank.model.Transaction;
+import com.mybank.springboot.model.Transaction;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;

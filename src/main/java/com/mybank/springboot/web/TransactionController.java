@@ -1,8 +1,8 @@
-package com.mybank.web;
+package com.mybank.springboot.web;
 
-import com.mybank.dto.TransactionDto;
-import com.mybank.model.Transaction;
-import com.mybank.service.TransactionService;
+import com.mybank.springboot.dto.TransactionDto;
+import com.mybank.springboot.model.Transaction;
+import com.mybank.springboot.service.TransactionService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
